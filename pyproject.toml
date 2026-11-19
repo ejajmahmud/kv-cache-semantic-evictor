@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kv-cache-semantic-evictor"
+version = "0.1.0"
+description = "Attention-guided and semantic entropy-based KV cache evictor enabling unbounded token generation on fixed GPU memory budgets"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+kv-cache-semantic-evictor = "kv_cache_semantic_evictor.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["kv_cache_semantic_evictor*"]
